@@ -15,7 +15,7 @@ spec:
         app: heros
     spec:
       containers:
-        - image: 'cffrestre/diplomado-ci-cd:dfc06b3d7620ca2f1b5d227378942303f4c39670'
+        - image: 'cffrestre/diplomado-ci-cd:0b1edb490727a77bd4253a029fe39891a638fb62'
           name: heros
           ports:
             - containerPort: 4200
