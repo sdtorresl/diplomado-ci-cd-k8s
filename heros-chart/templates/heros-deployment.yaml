@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heros
+  labels:
+    app: heros
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heros
+  template:
+    metadata:
+      labels:
+        app: heros
+    spec:
+      containers:
+        - image: 'cffrestre/diplomado-ci-cd:442dca2fd0ee0d12df9f284537000b919373b7f2'
+          name: heros
+          ports:
+            - containerPort: 4200
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "200Mi"
+            limits:
+              cpu: "200m"
+          startupProbe:
+            httpGet:
+              path: /
+              port: 4200
+            initialDelaySeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 4200
