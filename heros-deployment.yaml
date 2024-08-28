@@ -15,13 +15,13 @@ spec:
         app: heros
     spec:
       containers:
-        - image: 'cffrestre/diplomado-ci-cd:442dca2fd0ee0d12df9f284537000b919373b7f2'
+        - image: 'cffrestre/diplomado-ci-cd:0b1edb490727a77bd4253a029fe39891a638fb62'
           name: heros
           ports:
             - containerPort: 4200
           resources:
             requests:
-              cpu: "100m"
+              cpu: "50m"
               memory: "200Mi"
             limits:
               cpu: "200m"
