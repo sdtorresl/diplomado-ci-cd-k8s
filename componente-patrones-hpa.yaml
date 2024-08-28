@@ -1,0 +1,18 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: componente-patrones
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: componente-patrones
+  minReplicas: 1 # Definimos 2, para tener buena disponibilidad y a los pods le colocamos los recursos necesarios para atender el horario valle
+  maxReplicas: 8 # Particularidades del negocio, en cuantos X crece en un pico
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
