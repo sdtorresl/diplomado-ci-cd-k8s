@@ -13,7 +13,7 @@ spec:
           service:
             name: heros
             port:
-              number: 80
+              number: 4200
         path: /
         pathType: Prefix
         
