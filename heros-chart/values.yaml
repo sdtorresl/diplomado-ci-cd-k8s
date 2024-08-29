@@ -7,7 +7,7 @@ image:
   repository: "cffrestre/diplomado-ci-cd"
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "c24aabd695eec7e470c7361fe70e5e4938148256"
+  tag: "abf202aa5143fc10025eed9906ac8019b74b0d2f"
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
