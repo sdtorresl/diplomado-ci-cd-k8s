@@ -7,13 +7,13 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
-      paths:
-      - backend:
-          service:
-            name: heros
-            port:
-              number: 4200
-        path: /
-        pathType: Prefix
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: heros
+                port:
+                  number: 4200
         
