@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - http:
+    - http: 157.230.65.54
         paths:
           - path: /
             pathType: Prefix
