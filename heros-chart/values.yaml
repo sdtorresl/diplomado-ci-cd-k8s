@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: "cffrestre/diplomado-ci-cd"
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "442dca2fd0ee0d12df9f284537000b919373b7f2"
 
 imagePullSecrets: []
 nameOverride: ""
